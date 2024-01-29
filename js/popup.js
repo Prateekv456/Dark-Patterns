@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const circularButton = document.getElementById('circularButton');
     const analyzeText = document.getElementById('analyzeText');
+    const loadingDots = document.getElementById('loadingDots');
+    const scanningText = document.getElementById('scanningText');
 
     function startLoading() {
        const innerCircle = document.getElementById('innerCircle');
@@ -11,7 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
        analyzeText.textContent = 'Analyzing';
 
-      animateLoadingDots();
+       animateLoadingDots();
+
+       setTimeout(() => {
+          scanningText.textContent = 'Scanning for Dark Patterns!';
+       }, 1000);
     }
 
     function animateLoadingDots() {

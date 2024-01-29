@@ -9,14 +9,28 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
 }
 h1 {
-    height: 80px;
+    font-size: 25px;
     color: #9179FA;
     text-align: center;
 }
 
+h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(153, 118, 255, 0.5) 10%, transparent 50%);
+  border-radius: inherit;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
 p {
-    color: #FFFFFF;
-    text-align: center;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 .btndiv {
@@ -51,6 +65,19 @@ p {
     transition: opacity 0.3s ease;
   }
 
+  .inner-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.4) 10%, transparent 50%);
+    border-radius: inherit;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
   .loading-animation {
     position: absolute;
     border: 4px solid transparent;
@@ -66,3 +93,16 @@ p {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  #settingsIcon {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
