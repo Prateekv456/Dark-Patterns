@@ -1,7 +1,68 @@
+body {
+    background: #000000;
+    font-family: 'Open Sauce', sans-serif;
+}
 .container{
     height: 500px;
     width: 300px;
+    background: url(../img/bg.png);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 h1 {
     height: 80px;
+    color: #9179FA;
+    text-align: center;
 }
+
+p {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-button {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: #9680F4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .loading-animation {
+    position: absolute;
+    border: 4px solid transparent;
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
